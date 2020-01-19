@@ -1,0 +1,96 @@
+{
+  "name": "react-typescript-webpack-made-easy",
+  "version": "1.2.0",
+  "private": true,
+  "homepage": "http:///myapp",
+  "dependencies": {
+    "@types/jest": "24.0.18",
+    "@types/jquery": "^3.3.31",
+    "@types/node": "12.7.5",
+    "@types/reach__router": "^1.2.5",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "@types/react-router-dom": "^4.3.5",
+    "axios": "^0.19.1",
+    "bootstrap": "^4.3.1",
+    "fork-ts-checker-webpack-plugin": "^1.5.0",
+    "history": "^4.10.1",
+    "jquery": "^3.4.1",
+    "microtime": "^3.0.0",
+    "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.12",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.2",
+    "serve": "^11.1.0",
+    "sweetalert": "^2.1.2",
+    "webpack-dev-server": "^3.8.1",
+    "xml-loader": "^1.2.1"
+  },
+  "scripts": {
+    "start2": "chmod +x add remove & npm run django & npm run react_ts",
+    "react_ts": "react-scripts start",
+    "django": "./run.sh",
+    "build2": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "chmod +x add remove & webpack-dev-server  --hot --open ",
+    "build4": "webpack --mode production",
+    "build": "webpack -p && webpack-dev-server  --hot --open"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.6.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-react-scoped-css": "^1.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "http-proxy-middleware": "^0.20.0",
+    "image-webpack-loader": "^6.0.0",
+    "node-hot-loader": "^1.17.6",
+    "node-sass": "^4.13.1",
+    "raw-loader": "^3.1.0",
+    "react-hot-loader": "^4.12.14",
+    "react-scoped-styles": "^0.3.0",
+    "react-svg-loader": "^3.0.3",
+    "sass-loader": "^8.0.0",
+    "scoped-css-loader": "^1.0.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.2.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.3.9"
+  },
+  "main": "public/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brguru90/react-typescript-webpack-made-easy.git"
+  },
+  "license": "MIT",
+  "description": "Bootstrap,jQuery,routing modules,scss-css scope issue resolved",
+  "bugs": {
+    "url": "https://github.com/brguru90/react-typescript-webpack-made-easy/issues"
+  },
+  "author": "Guruprasad BR"
+}
