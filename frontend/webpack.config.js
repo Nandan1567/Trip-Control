@@ -162,6 +162,8 @@ module.exports = {
                 '^/api/logout_user/': '/logout_user/',
                 '^/api/get_ride_details/': '/get_ride_details/',
                 '^/api/add_ride/': '/add_ride/',
+                '^/api/accept_ride/': '/accept_ride/',
+                '^/api/end_ride/': '/end_ride/',
               }
             }
           }

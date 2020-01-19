@@ -10,5 +10,7 @@ urlpatterns = [
     path("login_driver/",views.login_driver),
     path("login_status/",views.get_session_details),
     path("logout_user/",views.logout_user),
-    path("add_ride/",views.add_ride)
+    path("add_ride/",views.add_ride),
+    path("accept_ride/",views.accept_ride),
+    path("end_ride/",views.end_ride),
 ]

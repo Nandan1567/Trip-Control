@@ -19,7 +19,7 @@ class Driver(models.Model):
         return self.name
 class Ride(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='user')
-    driver = models.ForeignKey(Driver, on_delete=models.CASCADE, verbose_name='driver')
+    driver = models.ForeignKey(Driver, on_delete=models.CASCADE, verbose_name='driver',null=True)
     date_time = models.DateTimeField(auto_now=True)
     ride_choices = [
 

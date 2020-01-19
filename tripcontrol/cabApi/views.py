@@ -118,8 +118,8 @@ def get_ride_details(request):
     if "user" in request.session:
         where+=" and us.name='"+request.session.get("user")+"'"
     if "driver" in request.session:
-        where+=" and dr.name='"+request.session.get("driver")+"'"
-    query='SELECT ride.id,us.name AS user,dr.name AS driver,date_time,ride_type,vehicle_number from "cabApi_ride" AS ride INNER JOIN "cabApi_user" AS us ON ride.user_id=us.id INNER JOIN "cabApi_driver" AS dr ON ride.driver_id=dr.id '+where
+        where+=" and ride_type='rq' or (dr.name='"+request.session.get("driver")+"' and ride_type!='rq')"
+    query='SELECT ride.id,us.name AS user,dr.name AS driver,date_time,ride_type,vehicle_number from "cabApi_ride" AS ride INNER JOIN "cabApi_user" AS us ON ride.user_id=us.id LEFT JOIN "cabApi_driver" AS dr ON ride.driver_id=dr.id '+where
     print(query)
     return HttpResponse(make_query(query),content_type="text/json")
     
@@ -180,29 +180,53 @@ def add_ride(request):
         if "user" in request.session:     
             # try:
             ride=Ride()
-            ride.user_id=User.objects.filter(name=request.session.get("user"))[0].id
-            rider=None
-            print(Driver.objects.all()[0].id)
-            for driver in Driver.objects.all():
-                if Ride.objects.filter(driver_id=driver.id).count()==0:
-                    rider=driver.id
-            if rider==None:
-                if Ride.objects.filter(ride_type="ac").count()!=0:
-                    return HttpResponse("Currntly no rider is free",content_type="text")
-                rider=Ride.objects.filter(~Q(ride_type="ac"))[0].driver_id  
-            print("rider",rider)     
-            ride.driver_id=rider
+            user_id=User.objects.filter(name=request.session.get("user"))[0].id
+            if Ride.objects.filter(Q(ride_type="rq")| Q(ride_type="ac"),user_id=user_id).count()!=0:
+                return HttpResponse("Your previous request already in progress",content_type="text")
+            ride.user_id=user_id
+            # rider=None
+            # print(Driver.objects.all()[0].id)
+            # for driver in Driver.objects.all():
+            #     if Ride.objects.filter(driver_id=driver.id).count()==0:
+            #         rider=driver.id
+            # if rider==None:
+            #     if Ride.objects.filter(ride_type="ac").count()!=0:
+            #         return HttpResponse("Currntly no rider is free",content_type="text")
+            #     rider=Ride.objects.filter(~Q(ride_type="ac"))[0].driver_id  
+            # print("rider",rider)     
+            # ride.driver_id=rider
             ride.phone_number="0000000000"
-            ride.vehicle_number="KA 14 4040"
             ride.ride_type="rq"
             ride.save()
             if ride!=None:
-                return HttpResponse("Ride added successfully , Your Rider is "+Driver.objects.filter(id=rider)[0].name,content_type="text")
+                return HttpResponse("success",content_type="text")
             else:
                 return HttpResponse("Ride request Failed",content_type="text")
             # except Exception as e:
             #     # print(str(e))
             #     return HttpResponse("Failed",content_type="text")
         return HttpResponse("Not logged in",content_type="text")
+    else:
+        return HttpResponse("Invalid request type",content_type="text")
+
+@csrf_exempt
+def accept_ride(request):
+    if  request.method == 'POST':   
+        if "driver" in request.session:
+            resp=Ride.objects.filter(id=request.POST.get("id")).update(driver_id=Driver.objects.filter(name=request.session.get("driver"))[0].id,ride_type="ac")
+            return HttpResponse(str(resp),content_type="text")
+        else:
+           return HttpResponse("Not logged in",content_type="text")
+    else:
+        return HttpResponse("Invalid request type",content_type="text")
+
+@csrf_exempt
+def end_ride(request):
+    if  request.method == 'POST':   
+        if "user" in request.session:
+            resp=Ride.objects.filter(id=request.POST.get("id"),user_id=User.objects.filter(name=request.session.get("user"))[0].id).update(ride_type="dn")
+            return HttpResponse(str(resp),content_type="text")
+        else:
+           return HttpResponse("Not logged in",content_type="text")
     else:
         return HttpResponse("Invalid request type",content_type="text")
