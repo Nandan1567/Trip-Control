@@ -1,11 +1,11 @@
 
-import React from 'react';
-import './Guru.scss';
-import page from './GuruHtml'
+import './Menu.scss';
+import page from './MenuHtml'
 import Myservice from '../Myservice/Myservice'
 var $ = require("jquery");
+var swal = require("sweetalert");
 
-class Guru extends Myservice {
+class Menu extends Myservice {
 
     constructor(props:any) {
         super(props);
@@ -20,7 +20,7 @@ class Guru extends Myservice {
     }
 
     guru() {
-        alert("hi")
+         swal("hi","")
     }
 
     render() {
@@ -30,5 +30,5 @@ class Guru extends Myservice {
     }
 }
 
-export default Guru;
+export default Menu;
     

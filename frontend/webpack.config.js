@@ -148,7 +148,7 @@ module.exports = {
             index: '404.html'
           },
         hot: true,
-        // port: 3000,
+        port: 3000,
         proxy: {
             "/api": {
               target: "http://localhost:8000",

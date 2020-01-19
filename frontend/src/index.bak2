@@ -9,7 +9,13 @@ import App from './App/App';
 import Not_found from './Not_found/Not_found';
 import Myservice from './Myservice/Myservice';
 import Guru from './Guru/Guru';
-import Users from './Users/Users';
+import Add_users from './Add_users/Add_users';
+import Add_driver from './Add_driver/Add_driver';
+import User_login from './User_login/User_login';
+import Driver_login from './Driver_login/Driver_login';
+import User_panel from './User_panel/User_panel';
+import Driver_panel from './Driver_panel/Driver_panel';
+import View_user from './View_user/View_user';
 let route_link
 try {
    let all_routes=require("./Routes/Routes").default
@@ -31,7 +37,13 @@ ReactDOM.render((
                 <Route exact path="/" component={App} />
                 <Route exact path="/App" component={App} />
 				<Route path="/guru" component={Guru} />
-				<Route path="/users" component={Users} />
+				<Route path="/add_users" component={Add_users} />
+				<Route path="/add_driver" component={Add_driver} />
+				<Route path="/user_login" component={User_login} />
+				<Route path="/driver_login" component={Driver_login} />
+				<Route path="/user_panel" component={User_panel} />
+				<Route path="/driver_panel" component={Driver_panel} />
+				<Route path="/view_user" component={View_user} />
                 {route_link}
                 <Route component={Not_found} />
             </Switch>

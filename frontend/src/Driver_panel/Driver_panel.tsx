@@ -3,6 +3,7 @@ import './Driver_panel.scss';
 import Myservice from '../Myservice/Myservice'
 var $ = require("jquery");
 var swal = require("sweetalert");
+import Menu from "../Menu/Menu"
 
 class Driver_panel extends Myservice {
 
@@ -17,6 +18,7 @@ class Driver_panel extends Myservice {
     }
 
     state = {
+        driver_name:"",
         ride: [{
             id:"",
             user: "",
@@ -28,8 +30,10 @@ class Driver_panel extends Myservice {
     }
 
     componentDidMount() {
-        if (this.fetch_data("/api/login_status/", "POST", "driver=1").toLowerCase() == "no data")
+        let driver_name=this.fetch_data("/api/login_status/", "POST", "driver=1").toLowerCase()
+        if ( driver_name== "no data")
             window.location.assign("#driver_login")
+        this.setState({driver_name:driver_name})
         this.getRideDetails();
         setInterval(() => {
             this.getRideDetails();
@@ -58,8 +62,11 @@ class Driver_panel extends Myservice {
     render() {
         return (
             <div className="Driver_panel">
-                <input type="button" value="logout" onClick={this.logout.bind(this)} />
-                <table>
+                <Menu />
+                <input type="button" value="logout" className='btn btn-primary' onClick={this.logout.bind(this)} />
+                <br /><br />
+                <b>Driver name:</b>{this.state.driver_name}<br /><br />
+                <table className="table">
                     <thead>
                         <tr>
                             <th>User name</th>
@@ -79,8 +86,10 @@ class Driver_panel extends Myservice {
                                         <td>{data.driver}</td>
                                         <td>{data.date_time}</td>
                                         <td>{data.vehicle_number}</td>
-                                        <td>{this.status[data.ride_type]}</td>
-                                        <td>{data.ride_type=="rq"?<input type="button" value="accept" onClick={this.accept.bind(this,data.id)} />:""}</td>
+                                        <td>{
+                                        //@ts-ignore
+                                        this.status[data.ride_type]}</td>
+                                        <td>{data.ride_type=="rq"?<input type="button" value="accept" className='btn btn-primary' onClick={this.accept.bind(this,data.id)} />:""}</td>
                                     </tr>
                                 )
                             })

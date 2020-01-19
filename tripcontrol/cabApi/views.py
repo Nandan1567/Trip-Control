@@ -98,23 +98,14 @@ def adddriver(request):
 
 @csrf_exempt
 def get_ride_details(request):
-    # queryset = Ride.objects.all()
-    # user = request.GET.get('user', None)
-    # driver = request.GET.get('driver', None)
-    # status = request.GET.get('status', None)
-    # if user is not None:
-    #     queryset = queryset.filter(user__name=user)
-    # if "user" in request.session:
-    #     queryset = queryset.filter(user__name=request.session.get("user"))
-    # if "driver" in request.session:
-    #     queryset = queryset.filter(driver__name=request.session.get("driver"))
-    # if driver is not None:
-    #     queryset = queryset.filter(driver__name=driver)
-    # if status is not None:
-    #     queryset = queryset.filter(ride_type=status)
-    # serializer = RideSerializer(queryset, many=True)
-    # return HttpResponse(serializer.data,content_type="text/json")
     where="where True"
+    if "user" not in request.session and "driver" not in request.session:
+        if "user" in request.GET:
+            where+=" and us.name='"+request.GET.get("user")+"'"
+        if "driver" in request.GET:
+            where+=" and dr.name='"+request.GET.get("driver")+"'"
+        if "status" in request.GET:
+            where+=" and ride.ride_type='"+request.GET.get("status")+"'"
     if "user" in request.session:
         where+=" and us.name='"+request.session.get("user")+"'"
     if "driver" in request.session:

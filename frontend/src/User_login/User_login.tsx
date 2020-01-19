@@ -3,6 +3,7 @@ import './User_login.scss';
 import Myservice from '../Myservice/Myservice'
 var $ = require("jquery");
 var swal = require("sweetalert");
+import Menu from "../Menu/Menu"
 
 class User_login extends Myservice {
 
@@ -34,8 +35,17 @@ class User_login extends Myservice {
     render() {
         return (
             <div className="User_login">
-                <input type="text" ref="name" />
-                <input type="button" value="Login" onClick={this.login.bind(this)} />
+                 <Menu />
+                 <table>
+                    <tr>
+                        <td>
+                            <input type="text" ref="name" />
+                        </td>
+                        <td>
+                            <input type="button" value="Login" className='btn btn-primary' onClick={this.login.bind(this)} />
+                        </td>
+                    </tr>
+                </table>
             </div>
         )
     }

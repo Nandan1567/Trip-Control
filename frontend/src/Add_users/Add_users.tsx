@@ -4,6 +4,7 @@ import './Add_users.scss';
 import Myservice from '../Myservice/Myservice'
 var $ = require("jquery");
 var swal = require("sweetalert");
+import Menu from "../Menu/Menu"
 
 class Add_users extends Myservice {
 
@@ -13,7 +14,7 @@ class Add_users extends Myservice {
 
     componentDidMount() {
         super.componentDidMount();
-        
+
     }
 
     componentDidUpdate() {
@@ -33,23 +34,25 @@ class Add_users extends Myservice {
     render() {
         return (
             <div className="Add_users">
-                <table>
+                <Menu />
+                <table className="table">
                     <thead>
                         <tr>
                             <th>User name</th>
                             <th>Mobile number</th>
+                            <th></th>
                         </tr>
                     </thead>
-                        <tbody>
+                    <tbody>
+                        <tr>
                             <td>
                                 <input type="text" ref="name" />
                             </td><td>
                                 <input type="text" ref="mobile" />
                             </td>
-                            <tr>
-                                <td colSpan={2}> <input type="button" value="Add" onClick={this.adduser.bind(this)} /></td>
-                            </tr>
-                        </tbody>
+                            <td colSpan={2}> <input type="button" className="btn btn-primary" value="Add" onClick={this.adduser.bind(this)} /></td>
+                        </tr>
+                    </tbody>
                 </table>
 
             </div>

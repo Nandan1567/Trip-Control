@@ -15,6 +15,8 @@ import User_login from './User_login/User_login';
 import Driver_login from './Driver_login/Driver_login';
 import User_panel from './User_panel/User_panel';
 import Driver_panel from './Driver_panel/Driver_panel';
+import View_rides from './View_rides/View_rides';
+import Menu from './Menu/Menu';
 let route_link
 try {
    let all_routes=require("./Routes/Routes").default
@@ -34,14 +36,14 @@ ReactDOM.render((
         <HashRouter>
             <Switch>
                 <Route exact path="/" component={App} />
-                <Route exact path="/App" component={App} />
-				<Route path="/guru" component={Guru} />
 				<Route path="/add_users" component={Add_users} />
 				<Route path="/add_driver" component={Add_driver} />
 				<Route path="/user_login" component={User_login} />
 				<Route path="/driver_login" component={Driver_login} />
 				<Route path="/user_panel" component={User_panel} />
 				<Route path="/driver_panel" component={Driver_panel} />
+				<Route path="/view_rides" component={View_rides} />
+				<Route path="/menu" component={Menu} />
                 {route_link}
                 <Route component={Not_found} />
             </Switch>

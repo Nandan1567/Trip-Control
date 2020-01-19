@@ -1,18 +1,14 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Menu from "../Menu/Menu"
 
 var page = function (_this: any) {
     return (
         <div className="App">
-            <h1 className="wel">Welcome</h1>
-            <h2>Routes</h2><br />
-            <Link to='/routes'>links</Link><br />
-            <p>
-                <input type="text" defaultValue="red" onChange={_this.setColor.bind(_this)} />
-                <b style={_this.state.test_style}>Test state update: {JSON.stringify(_this.state.test_style)}</b>
-            </p>
-            <input type="button" value="test" onClick={_this.guru.bind(_this)} /><br />
+            <Menu />
+            <br /><br /><br />
+            <p style={{maxWidth:"80%",margin:"auto"}}>LorLorem ipsum dolor sit amet consectetur adipisicing elit. Dolores corrupti aliquam deleniti labore earum facere. Deleniti, nisi amet cumque enim recusandae illo excepturi sed cum aut voluptatibus veritatis obcaecati non distinctio. Ipsum minima voluptas, odio cupiditate aliquid vel dolore qui doloribus dolorum debitis nostrum nisi. Quas possimus, iusto autem molestias provident alias? Quae minus, possimus porro, aliquid veritatis quos sapiente illo sequi error saepe cum. Excepturi sequi, laboriosam blanditiis aperiam quis sapiente amet! Ex non repellendus nostrum voluptas adipisci eligendi atque facilis tenetur, illum similique rem eius mollitia quas rerum sapiente quia laudantium nemo vero labore aut maiores nam! Quis corrupti laboriosam fuga porro, cum aperiam culpa consequatur et. Accusantium facere nihil dolorum laboriosam est officiis iusto cupiditate dolorem tempore? Cumque non, vel labore laudantium dignissimos hic, porro neque facilis vitae voluptatum placeat ut facere quibusdam quia architecto mollitia illum recusandae, optio ea minima reiciendis incidunt laboriosam quos odio. Tempore unde illo facere repellat perferendis, quae modi esse commodi dolores consequatur! Id sit, cumque eveniet vero adipisci esse odit, voluptate maxime rerum similique voluptatem ea in eaque amet laborum ducimus sequi odio alias. In mollitia vero nemo rem omnis inventore quos velit aliquam tenetur dicta, enim reprehenderit possimus dolorem minus suscipit laborum voluptate earum ad iste deleniti. Repellat deserunt omnis itaque nesciunt fuga, asperiores qui et quidem earum, laudantium nobis illum ipsa pariatur exercitationem ipsam ea tempore cum numquam vel soluta nihil, fugit voluptatem. Alias explicabo, eos odit sequi eveniet delectus cumque sit omnis esse, fugit architecto atque corporis accusamus ratione harum, quae laborum? Ratione dolorum voluptas culpa amet ad quidem voluptatibus sit dolorem ab placeat iure provident quisquam minima fuga modi, vero animi illo esse velit aperiam delectus eligendi autem possimus in. Fuga eaque laudantium ducimus ullam deserunt nesciunt, ut quidem blanditiis, non amet autem expedita maiores perspiciatis veniam dolorum esse voluptatibus illum repellendus sint a eum dolores ipsum exercitationem. Blanditiis officiis accusamus rem, aliquid quo rerum modi voluptatibus quasi inventore, autem sequi, quas iste eveniet illum porro vero. Nobis expedita ea tenetur vitae exercitationem? Voluptatibus, illum. Suscipit tempore temporibus neque quibusdam voluptas dignissimos doloribus alias veritatis laboriosam assumenda ea, accusantium est, quos omnis. Sapiente dolorem natus necessitatibus amet quisquam ipsa, at, error, rem eligendi ipsum modi voluptatem maxime? Aut corrupti maiores, iusto doloremque possimus aperiam ipsum sapiente dolorem consectetur, architecto rerum nobis hic quaerat? Beatae quo ullam tenetur officiis nostrum quisquam fuga eaque ab nemo qui odit, deserunt, blanditiis quos facilis ut perferendis officia est eligendi dolor. Nam consequatur aspernatur sequi repudiandae nulla dolor, harum error voluptas est vitae laborum! Explicabo voluptatem harum laborum, deserunt odio perferendis sed praesentium. Inventore, iusto atque! Aliquid quo dolorum veniam at totam. Assumenda odit quae quidem quod dolorum sequi impedit saepe doloremque? Eius doloribus praesentium officiis fugiat a dolorem ullam? Debitis culpa, fugiat suscipit assumenda commodi voluptates necessitatibus ducimus, modi fuga autem pariatur, vero quas dolorem libero quia ut sapiente beatae dicta! Soluta ipsam harum mollitia non, ut, in vel, optio quo perspiciatis minus dolorum! Neque aperiam quasi cum in, tempore nulla.em</p>
         </div>
     )
 }

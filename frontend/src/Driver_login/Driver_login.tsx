@@ -3,6 +3,7 @@ import './Driver_login.scss';
 import Myservice from '../Myservice/Myservice'
 var $ = require("jquery");
 var swal = require("sweetalert");
+import Menu from "../Menu/Menu"
 
 class Driver_login extends Myservice {
 
@@ -11,8 +12,8 @@ class Driver_login extends Myservice {
     }
 
     componentDidMount() {
-        if(this.fetch_data("/api/login_status/","POST","driver=1").toLowerCase() != "no data")
-        window.location.assign("#driver_panel")
+        if (this.fetch_data("/api/login_status/", "POST", "driver=1").toLowerCase() != "no data")
+            window.location.assign("#driver_panel")
         super.componentDidMount();
     }
 
@@ -33,8 +34,17 @@ class Driver_login extends Myservice {
     render() {
         return (
             <div className="Driver_login">
-                <input type="text" ref="name" />
-                <input type="button" value="Login" onClick={this.login.bind(this)} />
+                <Menu />
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" ref="name" />
+                        </td>
+                        <td>
+                            <input type="button" value="Login" className='btn btn-primary' onClick={this.login.bind(this)} />
+                        </td>
+                    </tr>
+                </table>
             </div>
         )
     }

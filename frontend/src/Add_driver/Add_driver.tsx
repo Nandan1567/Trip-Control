@@ -4,6 +4,7 @@ import './Add_driver.scss';
 import Myservice from '../Myservice/Myservice'
 var $ = require("jquery");
 var swal = require("sweetalert");
+import Menu from "../Menu/Menu"
 
 class Add_driver extends Myservice {
 
@@ -34,16 +35,19 @@ class Add_driver extends Myservice {
     render() {
         return (
             <div className="Add_driver">
-                <table>
+                <Menu />
+                <table className="table">
                     <thead>
                         <tr>
                             <th>User name</th>
                             <th>Mobile number</th>
                             <th>Vehicle number</th>
+                            <th></th>
                         </tr>
 
                     </thead>
-                        <tbody>
+                    <tbody>
+                        <tr>
                             <td>
                                 <input type="text" ref="name" />
                             </td>
@@ -53,10 +57,9 @@ class Add_driver extends Myservice {
                             <td>
                                 <input type="text" ref="v_num" />
                             </td>
-                            <tr>
-                            <td colSpan={3}> <input type="button" value="Add" onClick={this.adduser.bind(this)} /></td>
-                            </tr>
-                        </tbody>
+                            <td colSpan={3}> <input type="button" className="btn btn-primary" value="Add" onClick={this.adduser.bind(this)} /></td>
+                        </tr>
+                    </tbody>
                 </table>
 
             </div>
