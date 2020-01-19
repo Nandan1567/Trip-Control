@@ -1,7 +1,7 @@
 # Trip-Control
 
-sudo -u postgres createdb admin
-sudo -u postgres psql
+sudo -u postgres createdb admin <br>
+sudo -u postgres psql <br>
 create user admin with encrypted password 'admin';
 grant all privileges on database tripcontrol to admin;
 alter user admin with SUPERUSER;
