@@ -74,6 +74,7 @@ class User_panel extends Myservice {
         return (
             <div className="User_panel">
                  <Menu />
+                 
                  <table >
                      <tr>
                          <td><input type="button" value="logout" className='btn btn-primary' onClick={this.logout.bind(this)} /></td>
@@ -82,6 +83,7 @@ class User_panel extends Myservice {
                  </table>           
                 <br />
                 <b>Username:</b>{this.state.username}<br /><br />
+                <h2>User Prvious Ride Details</h2>
                 <table className="table">
                     <thead>
                         <tr>

@@ -35,6 +35,7 @@ class Add_users extends Myservice {
         return (
             <div className="Add_users">
                 <Menu />
+                <h2>User Registration</h2>
                 <table className="table">
                     <thead>
                         <tr>

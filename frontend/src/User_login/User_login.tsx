@@ -36,6 +36,7 @@ class User_login extends Myservice {
         return (
             <div className="User_login">
                  <Menu />
+                 <h2>User Login</h2>
                  <table>
                     <tr>
                         <td>

@@ -63,6 +63,7 @@ class Driver_panel extends Myservice {
         return (
             <div className="Driver_panel">
                 <Menu />
+                <h2>Driver Prvious Ride Details</h2>
                 <input type="button" value="logout" className='btn btn-primary' onClick={this.logout.bind(this)} />
                 <br /><br />
                 <b>Driver name:</b>{this.state.driver_name}<br /><br />

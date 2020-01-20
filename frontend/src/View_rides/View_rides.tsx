@@ -55,10 +55,10 @@ class View_rides extends Myservice {
         //@ts-ignore
         if (this.refs.status.value == -1)
             delete query["status"]
-            //@ts-ignore
+        //@ts-ignore
         if (this.refs.user.value == "")
             delete query["user"]
-            //@ts-ignore
+        //@ts-ignore
         if (this.refs.driver.value == "")
             delete query["driver"]
 
@@ -69,8 +69,8 @@ class View_rides extends Myservice {
     render() {
         return (
             <div className="View_rides">
- <Menu />
-
+                <Menu />
+                <h2>All User Driver  Ride Details</h2>
                 <table className="table">
                     <thead >
                         <tr>

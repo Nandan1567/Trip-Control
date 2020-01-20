@@ -36,6 +36,7 @@ class Add_driver extends Myservice {
         return (
             <div className="Add_driver">
                 <Menu />
+                <h2>Driver Registration</h2>
                 <table className="table">
                     <thead>
                         <tr>
