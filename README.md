@@ -41,8 +41,12 @@ written Code in typeScript <br>
 
 npm start <br><br>
 
-python3 manage.py makemigrations  --traceback cabApi
+python3 manage.py makemigrations  --traceback cabApi<br>
 
+
+In my case, what created the tables was this:<br>
+
+python manage.py migrate --run-syncdb<br>
 
 
 
