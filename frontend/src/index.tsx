@@ -8,7 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App/App';
 import Not_found from './Not_found/Not_found';
 import Myservice from './Myservice/Myservice';
-import Guru from './Guru/Guru';
 import Add_users from './Add_users/Add_users';
 import Add_driver from './Add_driver/Add_driver';
 import User_login from './User_login/User_login';

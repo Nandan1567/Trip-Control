@@ -58,10 +58,13 @@ def make_query(stmt):
 
 @csrf_exempt
 def adduser(request):
-    if  request.method == 'POST':
+    if  request.method == 'POST' and "name" in request.POST:
         try:
+            name=request.POST.get("name").strip().lower()
+            if name=="":
+                return HttpResponse("Incomplete  data",content_type="text")
             user=User()
-            user.name=request.POST.get("name").strip().lower()
+            user.name=name
             user.phone_number=request.POST.get("mobile").strip()
             user.save()
             if user!=None:
@@ -78,10 +81,13 @@ def adduser(request):
 
 @csrf_exempt
 def adddriver(request):
-    if  request.method == 'POST':        
+    if  request.method == 'POST' and "name" in request.POST:        
         try:
+            name=request.POST.get("name").strip().lower()
+            if name=="":
+                return HttpResponse("Incomplete  data",content_type="text")
             driver=Driver()
-            driver.name=request.POST.get("name").strip().lower()
+            driver.name=name
             driver.phone_number=request.POST.get("mobile").strip()
             driver.vehicle_number=request.POST.get("vehicle_number").strip()
             driver.save()
