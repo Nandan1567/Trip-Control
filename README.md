@@ -44,4 +44,30 @@ Activating Virtual  Environment
 ```
 source .env/bin/activate
 ```
+Once the repository is cloned and virtual environment set up, go to the directory where the requirements.txt(Catalogue-management-system/backend/) is and type the following code in your terminal:
 
+```
+pip install requirements.txt
+```
+
+Then to run the server, go to the directory 'Catalogue-management-system/backend/cms/' and type the following code in terminal:
+
+```
+python3 manage.py runserver
+```
+
+For Frontend which is ReactJS,
+Dependencies are: 
+```
+"nodejs":"^v13.6.0",
+"react": "^16.12.0",
+"react-dom": "^16.12.0",
+"react-router-dom": "^5.1.2",
+"react-scripts": "0.9.5"
+
+```
+Add packages
+'''
+"Bootstrap,jQuery,routing modules,sweetalert"
+'''
+Go to 'Catalogue-management-system/frontend/cms_ui/' and type the following code in the terminal:
