@@ -13,14 +13,28 @@ npm start<br>
 
 
 ## Usage
+### USER
+Register as a user <br>
+Each User can have only one ride at a time <br>
+Enter  User Name to Login <br>
+Check the previous rides status ,if the status is None User can book a ride.<br>
+### DRIVER
+Register as a Driver <br>
+Each Driver can have only one ride at a time <br>
+Enter  Driver Name to Login <br> 
+Check the previous rides status  <br>
+The requested  ride  from a User will be accepted by the driver.<br>
+After completion of ride the status will be updated as finished.<br>
 
-.singularize('phenomena') # returns 'phenomenon'
-```
+### Status
+Ride contains status as 1.Requested,2.Accepted and 3.Done <br>
+Requested ride from the user is displayed on the driver panel<br>
+On Accepting the request from the user  the status is updated as 'Ongoing'<br>
+After completion of ride the user can end the trip,then the  status is updated as 'Finished'.<br>
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+### RIDE DETAILS OF USER AND DRIVER
+Enter the username to display the ride details in view_ride page <br>
+Enter the drivername to display the ride details in view_ride page <br>
 
-Please make sure to update tests as appropriate.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
