@@ -1,23 +1,20 @@
-# Foobar
-
-Foobar is a Python library for dealing with word pluralization.
+# Cab Allocation System
+This Web Application has build for both frontend and backend development
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+sudo apt-get install curl
+sudo apt-get install -y nodejs   
+node --version  (13.6.0) 
+npm --version (6.13.4)
+sudo npm install -g create-react-app
+npm start
 
-```bash
-pip install foobar
-```
+
 
 ## Usage
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+.singularize('phenomena') # returns 'phenomenon'
 ```
 
 ## Contributing
