@@ -1,33 +1,29 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
+# Foobar
 
-TODO: Write a project description
+Foobar is a Python library for dealing with word pluralization.
 
 ## Installation
 
-TODO: Describe the installation process
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install foobar
+```
 
 ## Usage
 
-TODO: Write usage instructions
+```python
+import foobar
+
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+```
 
 ## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-
-## History
-
-TODO: Write history
-
-## Credits
-
-TODO: Write credits
+Please make sure to update tests as appropriate.
 
 ## License
-
-TODO: Write license
+[MIT](https://choosealicense.com/licenses/mit/)
