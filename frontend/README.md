@@ -1,16 +1,13 @@
-# Catalogue-management-system
+# Cab Allocation System
 
-Users will be able to create a product. A product has parameters like Brand, Category
-and Specifications.
-Products can be viewed on a listing page with filters of Brand and Category.
+Real time rides can be requested by customers on the system,
+which can be accepted by available drivers (who don’t have an ongoing trip). Whichever
+driver picks up gets to serve the user. Ride is completed after the customer ends it.
 
-Further explanations and assumptions:
-
-1. Categories have a tree structure - similar to that of Amazon / Flipkart.
-2. Each product can have multiple specifications. Specification params - Key, Value &
-Unit. Eg. Key - Length, Value: 30 , Unit - cm can be a specification for a scale.
-3. Category breadcrumb should be displayed on the product page.
-4. Product, Brand and Category names must be unique.
+Further explanation and assumptions:
+1. Each customer can request only one ride at a time.
+2. Each driver can accept / serve only one ride at a time.
+3. Every ride has 3 status - requested, accepted & done..
 
 ### Prerequisites
 
