@@ -50,7 +50,7 @@ Once the repository is cloned and virtual environment set up, go to the director
 pip install requirements.txt
 ```
 
-Then to run the server, go to the directory 'Catalogue-management-system/backend/cms/' and type the following code in terminal:
+Then to run the server, go to the directory '/Trip-Control/tripcontrol' and type the following code in terminal:
 
 ```
 python3 manage.py runserver
@@ -67,10 +67,7 @@ Dependencies are:
 "react-scripts": "0.9.5"
 
 ```
-Add packages are :
-```
-"Bootstrap,jQuery,routing modules,sweetalert"
-```
+
 Go to '/Trip-Control/frontend' and type the following code in the terminal:
 ```
 "sudo apt install nodejs",
