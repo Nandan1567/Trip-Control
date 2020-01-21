@@ -25,7 +25,7 @@ six==1.13.0
 sqlparse==0.3.0
 
 ```
-### Installing
+### Installation
 
 Clone the repository
 
@@ -48,6 +48,16 @@ Once the repository is cloned and virtual environment set up, go to the director
 
 ```
 pip install requirements.txt
+```
+
+### Database setup
+
+If all requirements are installed, then Postgres database must be set up as per stated below.
+```
+Database Name: tripcontrol
+Username: admin
+Password: admin
+
 ```
 
 Then to run the server, go to the directory '/Trip-Control/tripcontrol' and type the following code in terminal:
