@@ -60,14 +60,53 @@ For Frontend which is ReactJS,
 Dependencies are: 
 ```
 "nodejs":"^v13.6.0",
+"npm":"^6.13.4",
 "react": "^16.12.0",
 "react-dom": "^16.12.0",
 "react-router-dom": "^5.1.2",
 "react-scripts": "0.9.5"
 
 ```
-Add packages
-'''
+Add packages are :
+```
 "Bootstrap,jQuery,routing modules,sweetalert"
-'''
-Go to 'Catalogue-management-system/frontend/cms_ui/' and type the following code in the terminal:
+```
+Go to '/Trip-Control/frontend' and type the following code in the terminal:
+```
+"sudo apt install nodejs",
+"node --version",
+"npm install", 
+"npm -v",
+
+```
+Then to run the react server, type the code:
+```
+npm start
+```
+
+The server has been set up and you are ready to go.
+## Usage
+### USER
+Register as a user <br>
+Each user can have only one ride at a time <br>
+Enter  user name to Login <br>
+Check the previous rides status ,if the status is None user can book a ride.<br>
+### DRIVER
+Register as a Driver <br>
+Each driver can have only one ride at a time <br>
+Enter  driver name to Login <br> 
+Check the previous rides status  <br>
+The requested  ride  from a user will be accepted by the driver.<br>
+After completion of ride the status will be updated as 'finished'.<br>
+
+### Status
+Ride contains status as 1.Requested,2.Accepted and 3.Done <br>
+Requested ride from the user is displayed on the driver panel<br>
+On Accepting the request from the user  the status is updated as 'ongoing'<br>
+After completion of ride the user can end the trip,then the  status is updated as 'finished'.<br>
+
+### RIDE DETAILS OF USER AND DRIVER
+Enter the username to display the ride details in view_ride page <br>
+Enter the drivername to display the ride details in view_ride page <br>
+
+
