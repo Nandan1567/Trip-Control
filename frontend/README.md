@@ -4,11 +4,11 @@ This Web Application has build for both frontend and backend development
 ## Installation
 
 sudo apt-get install curl<br>
-sudo apt-get install -y nodejs   l<br>
-node --version  (13.6.0) l<br>
+sudo apt-get install nodejs <br>
+node --version  (13.6.0) <br>
 npm --version (6.13.4)l<br>
-sudo npm install -g create-react-appl<br>
-npm startl<br>
+sudo npm install -g create-react-app<br>
+npm start<br>
 
 
 
