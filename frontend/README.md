@@ -1,49 +1,110 @@
-# Cab Allocation System
-This Web Application is developed using<br> 
-1.Reactjs for frontend development.<br>
-2.Django for backend development.<br>
-3.PostgreSQL for Database.
+# Catalogue-management-system
+
+Users will be able to create a product. A product has parameters like Brand, Category
+and Specifications.
+Products can be viewed on a listing page with filters of Brand and Category.
+
+Further explanations and assumptions:
+
+1. Categories have a tree structure - similar to that of Amazon / Flipkart.
+2. Each product can have multiple specifications. Specification params - Key, Value &
+Unit. Eg. Key - Length, Value: 30 , Unit - cm can be a specification for a scale.
+3. Category breadcrumb should be displayed on the product page.
+4. Product, Brand and Category names must be unique.
+
+### Prerequisites
+
+You need to install the following packages for backend:
+
+```
+asgiref==3.2.3
+Django==3.0.1
+django-cors-headers==3.2.0
+django-jsonfield==1.4.0
+djangorestframework==3.11.0
+pkg-resources==0.0.0
+pytz==2019.3
+six==1.13.0
+sqlparse==0.3.0
+
+```
+
+### Installing
+
+Clone the repository
+
+```
+git clone https://github.com/sachins0023/Catalogue-management-system.git
+```
+
+Setting up your virtual environment:
+
+```
+python3 -m venv .env
+```
+
+Activating Virtual  Environment
+
+```
+source .env/bin/activate
+```
+
+Once the repository is cloned and virtual environment set up, go to the directory where the requirements.txt(Catalogue-management-system/backend/) is and type the following code in your terminal:
+
+```
+pip install requirements.txt
+```
+
+Then to run the server, go to the directory 'Catalogue-management-system/backend/cms/' and type the following code in terminal:
+
+```
+python3 manage.py runserver
+```
+
+Your server is set up with all the APIs active.
+
+For Frontend which is ReactJS,
+Dependencies are: 
+```
+"axios": "^0.19.0",
+"react": "^16.12.0",
+"react-dom": "^16.12.0",
+"react-redux": "^7.1.3",
+"react-router-dom": "^5.1.2",
+"redux": "^4.0.4",
+"react-scripts": "0.9.5"
+```
+Go to 'Catalogue-management-system/frontend/cms_ui/' and type the following code in the terminal:
+
+```
+npm install
+```
+Then to run the react server, type the code:
+```
+npm start
+```
+
+The server has been set up and you are ready to go.
+
+### While navigating through UI
+
+A few mock data has been added to the sqlite database that is attached with the product. Also Click on the different categories listed in Categories column to list products filtered on categories and similarly click on the different brands in Brands column to list products filtered on Brands.
+
+P.S:The aesthetics of the page is at the most basic level. Some more work could be put in to beautify the UI. The project has been completed keeping the sole aim as working completion rather than aesthetically pleasing. 
 
 
-## Further explanation and assumptions:
-1. Each customer can request only one ride at a time.<br>
-2. Each driver can accept / serve only one ride at a time.<br>
-3. Every ride has 3 status - requested, accepted & done.<br>
-
-## Installation
-
-sudo apt-get install curl<br>
-sudo apt-get install nodejs <br>
-node --version  (13.6.0) <br>
-npm --version (6.13.4)l<br>
-sudo npm install -g create-react-app<br>
-npm start<br>
 
 
 
-## Usage
-### USER
-Register as a user <br>
-Each user can have only one ride at a time <br>
-Enter  user name to Login <br>
-Check the previous rides status ,if the status is None user can book a ride.<br>
-### DRIVER
-Register as a Driver <br>
-Each driver can have only one ride at a time <br>
-Enter  driver name to Login <br> 
-Check the previous rides status  <br>
-The requested  ride  from a user will be accepted by the driver.<br>
-After completion of ride the status will be updated as 'finished'.<br>
 
-### Status
-Ride contains status as 1.Requested,2.Accepted and 3.Done <br>
-Requested ride from the user is displayed on the driver panel<br>
-On Accepting the request from the user  the status is updated as 'ongoing'<br>
-After completion of ride the user can end the trip,then the  status is updated as 'finished'.<br>
 
-### RIDE DETAILS OF USER AND DRIVER
-Enter the username to display the ride details in view_ride page <br>
-Enter the drivername to display the ride details in view_ride page <br>
+
+
+
+
+
+
+
 
 
 
