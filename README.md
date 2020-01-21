@@ -53,6 +53,40 @@ pip install requirements.txt
 ### Database setup
 
 If all requirements are installed, then Postgres database must be set up as per stated below.
+
+Activating postgres
+```
+sudo su postgres
+
+```
+Get in to postgres shell
+```
+psql
+
+```
+To create a database for our Django project
+```
+CREATE DATABASE tripcontrol;
+
+```
+Create a database user which we will use to connect to and interact with the database. Set the password.
+```
+CREATE USER admin WITH PASSWORD 'admin';
+
+```
+Now, all we need to do is give our database user access rights to the database we created
+```
+GRANT ALL PRIVILEGES ON DATABASE tripcontrol TO admin;
+
+```
+Before running server make sure all migrations done. To exucute all migration
+```
+python3 manage.py migrate
+python3 manage.py makemigrations
+
+```
+
+## Overall detail
 ```
 Database Name: tripcontrol
 Username: admin
