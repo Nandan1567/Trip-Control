@@ -1,39 +1,36 @@
-## Added packages
+<snippet>
+  <content><![CDATA[
+# ${1:Project Name}
 
-Bootstrap,jQuery,routing modules,sweetalert
+TODO: Write a project description
 
-## Isuues resolved
-css conflict solved using scss <br>
-routing correction made <br>
-404 handling
+## Installation
 
-## Available Scripts
+TODO: Describe the installation process
 
-### Add components like Angular cli
-#### `./add component1 component2`
- OR
-#### `python3 add.py component1 component2`
+## Usage
 
-### Remove components
-#### `./remove component1 component2`
- OR
-#### `python3 remove.py component1 component2`
+TODO: Write usage instructions
 
-## 
+## Contributing
 
-### `npm start`
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
-Runs the app in the development mode.<br>
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+## History
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+TODO: Write history
 
-### `npm test`
+## Credits
 
-Launches the test runner in the interactive watch mode.
+TODO: Write credits
 
-### `npm run build`
+## License
 
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance
+TODO: Write license
+]]></content>
+  <tabTrigger>readme</tabTrigger>
+</snippet>
