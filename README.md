@@ -36,7 +36,7 @@ git clone https://github.com/Nandan1567/Trip-Control.git
 Setting up your virtual environment:
 
 ```
-python3 -m venv cab
+python3 -m venv .evnv
 ```
 
 Activating Virtual  Environment
