@@ -210,8 +210,10 @@ def add_ride(request):
 def accept_ride(request):
     if  request.method == 'POST':   
         if "driver" in request.session:
+            if Ride.objects.filter(ride_type="ac",driver_id=Driver.objects.filter(name=request.session.get("driver"))[0]).count()>0:
+                return HttpResponse("You can't accept more than one ride",content_type="text")
             resp=Ride.objects.filter(id=request.POST.get("id")).update(driver_id=Driver.objects.filter(name=request.session.get("driver"))[0].id,ride_type="ac")
-            return HttpResponse(str(resp),content_type="text")
+            return HttpResponse("updated",content_type="text")
         else:
            return HttpResponse("Not logged in",content_type="text")
     else:

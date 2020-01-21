@@ -55,7 +55,9 @@ class Driver_panel extends Myservice {
     }
 
     accept=(id:any,e:any)=>{
-        this.fetch_data("/api/accept_ride/", "POST","id="+id)
+        let resp=this.fetch_data("/api/accept_ride/", "POST","id="+id)
+        if(resp!="updated")
+            swal(resp)
         this.getRideDetails();
     }
 
