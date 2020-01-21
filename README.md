@@ -23,6 +23,7 @@ pkg-resources==0.0.0
 pytz==2019.3
 six==1.13.0
 sqlparse==0.3.0
+psycopg2==2.7.4
 
 ```
 ### Installation
