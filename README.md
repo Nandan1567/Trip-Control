@@ -1,5 +1,5 @@
 
-# Cab Allocation System
+# Trip-Control
 Real time rides can be requested by customers on the system,
 which can be accepted by available drivers (who don’t have an ongoing trip). Whichever
 driver picks up gets to serve the user. Ride is completed after the customer ends it.
@@ -45,7 +45,7 @@ Activating Virtual  Environment
 ```
 source .env/bin/activate
 ```
-Once the repository is cloned and virtual environment set up, go to the directory where the requirements.txt(/Trip-Control) is and type the following code in your terminal:
+Once the repository is cloned and virtual environment set up, go to the directory where the requirements.txt(Trip-Control/) is and type the following code in your terminal:
 
 ```
 pip install requirements.txt
