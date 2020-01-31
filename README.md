@@ -136,6 +136,7 @@ Each user can have only one ride at a time <br>
 Enter  user name to Login <br>
 Check the previous rides status ,if the status is None user can book a ride.<br>
 ### DRIVER
+![alt text](https://github.com/Nandan1567/Show-Cards-Of-Users/blob/master/appScreenshots/Screenshot%20from%202020-01-31%2011-05-01.png)
 Register as a Driver <br>
 Each driver can have only one ride at a time <br>
 Enter  driver name to Login <br> 
@@ -150,6 +151,7 @@ On Accepting the request from the user  the status is updated as 'ongoing'<br>
 After completion of ride the user can end the trip,then the  status is updated as 'finished'.<br>
 
 ### RIDE DETAILS OF USER AND DRIVER
+![alt text](https://github.com/Nandan1567/Show-Cards-Of-Users/blob/master/appScreenshots/Screenshot%20from%202020-01-31%2011-05-19.png)
 Enter the username to display the ride details in view_ride page <br>
 Enter the drivername to display the ride details in view_ride page <br>
 
