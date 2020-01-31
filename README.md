@@ -129,6 +129,8 @@ npm start
 The server has been set up and you are ready to go.
 ## Usage
 ### USER
+
+![alt text](https://github.com/Nandan1567/Show-Cards-Of-Users/blob/master/appScreenshots/Screenshot%20from%202020-01-31%2011-04-47.png)
 Register as a user <br>
 Each user can have only one ride at a time <br>
 Enter  user name to Login <br>
